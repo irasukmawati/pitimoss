@@ -11,12 +11,12 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar user (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="user-panel mt-3 pb-3 mb-6 d-flex">
             <div class="image">
                 <img src="<?= base_url('template/dist/img/user3-128x128.png') ?>" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="" class="d-block font-weight-dark-bold">Admin Kelompok 3</a>
+                <a href="" class="d-block font-weight-dark-bold">Kelompk 3</a>
             </div>
         </div>
 
