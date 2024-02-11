@@ -34,7 +34,7 @@ class Kategori extends BaseController
                 "nama_kategori" => $this->request->getPost('nama_kategori')
             ]);
 
-            return redirect('kategori');
+            return redirect()->to(base_url('kategori'));
         }
         echo view('part_adm/header');
         echo view('part_adm/top_menu');
@@ -61,7 +61,7 @@ class Kategori extends BaseController
             $kat->update($kode, [
                 "nama_kategori" => $this->request->getPost('nama_kategori')
             ]);
-            return redirect('kategori');
+            return redirect()->to(base_url('kategori'));
         }
         //tampilkan form edit
         echo view('part_adm/header');
@@ -75,6 +75,6 @@ class Kategori extends BaseController
     {
         $kat = new KategoriModel();
         $kat->delete($kode);
-        return redirect('kategori');
+        return redirect()->to(base_url('kategori'));
     }
 }

@@ -50,6 +50,9 @@ class Login extends BaseController
                     'username' => $data['username'],
                     'hak_akses' => $data['hak_akses'],
                     'kode_user' => $data['kode_user'],
+                    'email' => $data['email'],
+                    'no_hp' => $data['no_hp'],
+                    'alamat' => $data['alamat'],
                 ]);
 
                 // Redirect based on user role

@@ -40,7 +40,7 @@ class Transaksi extends BaseController
                 "diskon" => $this->request->getPost('diskon'),
             ]);
 
-            return redirect('transaksi');
+            return redirect()->to(base_url('transaksi'));
         }
         echo view('part_adm/header');
         echo view('part_adm/top_menu');
@@ -79,7 +79,7 @@ class Transaksi extends BaseController
             $trans->update($kode, [
                 "diskon" => $this->request->getPost('diskon')
             ]);
-            return redirect('transaksi');
+            return redirect()->to(base_url('transaksi'));
         }
         //tampilkan form edit
         echo view('part_adm/header');
@@ -93,6 +93,6 @@ class Transaksi extends BaseController
     {
         $buk = new TransaksiModel();
         $buk->delete($kode);
-        return redirect('transaksi');
+        return redirect()->to(base_url('transaksi'));
     }
 }

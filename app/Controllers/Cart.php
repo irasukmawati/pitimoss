@@ -79,13 +79,13 @@ class Cart extends BaseController
                 "jumlah" => $this->request->getPost('jumlah')
             ]);
         }
-        return redirect('cart');
+        return redirect()->to(base_url('cart'));
     }
     public function delete($id)
     {
         $detail = new DetailTransaksiModel();
         $detail->delete($id);
-        return redirect('cart');
+        return redirect()->to(base_url('cart'));
     }
     public function checkout()
     {

@@ -17,6 +17,7 @@ class Buku extends BaseController
         echo view('part_adm/side_menu', $data);
         echo view('part_dashboard/buku', $data);
         echo view('part_adm/footer');
+        // return redirect()->to(base_url('/buku'));
     }
 
     public function tambah()
@@ -45,7 +46,7 @@ class Buku extends BaseController
 
             ]);
 
-            return redirect('buku');
+            return redirect()->to(base_url('buku'));
         }
         $buku = new BukuModel();
         $kategori = new KategoriModel();
@@ -96,7 +97,7 @@ class Buku extends BaseController
                     "harga" => $this->request->getPost('harga'),
                 ]);
             }
-            return redirect('buku');
+            return redirect()->to(base_url('buku'));
         }
         $kategori = new KategoriModel();
         $data['kategori'] = $kategori->findAll();
@@ -109,8 +110,14 @@ class Buku extends BaseController
 
     public function delete($kode)
     {
-        $buk = new BukuModel();
-        $buk->delete($kode);
-        return redirect('buku');
+        $data = new BukuModel();
+        $data->delete($kode);
+        $buk['buk'] = $data->findAll();
+        // echo view('part_adm/header', $buk);
+        // echo view('part_adm/top_menu', $buk);
+        // echo view('part_adm/side_menu', $buk);
+        // echo view('part_dashboard/buku', $buk);
+        // echo view('part_adm/footer');
+        return redirect()->to(base_url('buku'));
     }
 }

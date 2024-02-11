@@ -18,19 +18,19 @@
                     <div class="row">
                         <div class=" col-md-12 form-group">
                             <label>Nama Penerima</label>
-                            <input class="form-control" type="text" name="nama_lengkap">
+                            <input class="form-control" type="text" name="nama_lengkap" value=" <?= $_SESSION['username'] ?>">
                         </div>
                         <div class="col-md-6 form-group">
                             <label>E-mail</label>
-                            <input class="form-control" type="text" name="email">
+                            <input class="form-control" type="text" name="email" value=" <?= $_SESSION['email'] ?>">
                         </div>
                         <div class="col-md-6 form-group">
                             <label>No HP</label>
-                            <input class="form-control" type="text" name="no_hp">
+                            <input class="form-control" type="text" name="no_hp" value=" <?= $_SESSION['no_hp'] ?>">
                         </div>
                         <div class="col-md-12 form-group">
                             <label>Alamat</label>
-                            <input class="form-control" type="text" name="alamat">
+                            <input class="form-control" type="text" name="alamat" value=" <?= $_SESSION['alamat'] ?>">
                         </div>
                         <div class="col-md-6 form-group">
                             <label>Kota / Kabupaten</label>

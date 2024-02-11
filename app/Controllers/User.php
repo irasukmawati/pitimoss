@@ -52,7 +52,7 @@ class User extends BaseController
                 "no_hp_kerabat" => $this->request->getPost('no_hp_kerabat'),
             ]);
 
-            return redirect('user');
+            return redirect()->to(base_url('user'));
         }
         echo view('part_adm/header');
         echo view('part_adm/top_menu');
@@ -115,7 +115,7 @@ class User extends BaseController
             $us->update($kode, [
                 "no_hp_kerabat" => $this->request->getPost('no_hp_kerabat')
             ]);
-            return redirect('user');
+            return redirect()->to(base_url('user'));
         }
         //tampilkan form edit
         echo view('part_adm/header');
@@ -129,6 +129,6 @@ class User extends BaseController
     {
         $buk = new UserModel();
         $buk->delete($kode);
-        return redirect('user');
+        return redirect()->to(base_url('user'));
     }
 }

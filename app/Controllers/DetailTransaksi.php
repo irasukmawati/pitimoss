@@ -38,7 +38,7 @@ class DetailTransaksi extends BaseController
                 "jumlah" => $this->request->getPost('jumlah'),
             ]);
 
-            return redirect('detailtransaksi');
+            return redirect()->to(base_url('detailtransaksi'));
         }
         echo view('part_adm/header');
         echo view('part_adm/top_menu');
@@ -73,7 +73,7 @@ class DetailTransaksi extends BaseController
             $detail->update($kode, [
                 "jumlah" => $this->request->getPost('jumlah')
             ]);
-            return redirect('detailtransaksi');
+            return redirect()->to(base_url('detailtransaksi'));
         }
         //tampilkan form edit
         echo view('part_adm/header');
@@ -87,6 +87,6 @@ class DetailTransaksi extends BaseController
     {
         $buk = new DetailTransaksiModel();
         $buk->delete($kode);
-        return redirect('detailtransaksi');
+        return redirect()->to(base_url('detailtransaksi'));
     }
 }
